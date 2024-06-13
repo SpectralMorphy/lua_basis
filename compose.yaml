@@ -1,0 +1,12 @@
+name: lua_basis
+
+services:
+  luaenv_5_1:
+    build: .
+    stdin_open: true
+    tty: true
+    profiles:
+      - luaenv_5_1
+    working_dir: ${WORKDIR}
+    volumes:
+      - ./lua:${WORKDIR}
